@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="XIII沖 — 2026/7/25–8/9 沖繩 16 天親子行程功課：逐日安排、專題攻略、現金地圖、地圖與訂位連結">
+<meta name="robots" content="noindex">
+<title>XIII沖 — 16天行程功課</title>
+<style>
+  :root {
+    --paper: #F7F9F8; --card: #FFFFFF; --ink: #1C2E33; --ink-2: #55696E; --line: #DCE5E4;
+    --sea: #0E6B72; --sea-soft: #E1EFEE; --sun: #8A5A14; --sun-soft: #F5E8D2;
+    --coral: #B03A33; --coral-soft: #F7E3E1; --ok: #2E6B47; --ok-soft: #DFEEE4;
+    --fire: #6B4FA0; --fire-soft: #EBE4F5;
+    --nav-h: 54px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #0E181B; --card: #162428; --ink: #E4EDEB; --ink-2: #93A8AB; --line: #2A3B40;
+      --sea: #5FB8BB; --sea-soft: #14343A; --sun: #E0A95C; --sun-soft: #3A2F17;
+      --coral: #E58079; --coral-soft: #42221F; --ok: #7CC299; --ok-soft: #1D3627;
+      --fire: #B49FE0; --fire-soft: #2E2444;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0E181B; --card: #162428; --ink: #E4EDEB; --ink-2: #93A8AB; --line: #2A3B40;
+    --sea: #5FB8BB; --sea-soft: #14343A; --sun: #E0A95C; --sun-soft: #3A2F17;
+    --coral: #E58079; --coral-soft: #42221F; --ok: #7CC299; --ok-soft: #1D3627;
+    --fire: #B49FE0; --fire-soft: #2E2444;
+  }
+  :root[data-theme="light"] {
+    --paper: #F7F9F8; --card: #FFFFFF; --ink: #1C2E33; --ink-2: #55696E; --line: #DCE5E4;
+    --sea: #0E6B72; --sea-soft: #E1EFEE; --sun: #8A5A14; --sun-soft: #F5E8D2;
+    --coral: #B03A33; --coral-soft: #F7E3E1; --ok: #2E6B47; --ok-soft: #DFEEE4;
+    --fire: #6B4FA0; --fire-soft: #EBE4F5;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    background: var(--paper); color: var(--ink);
+    font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", "Hiragino Sans", sans-serif;
+    line-height: 1.75; margin: 0; padding: 0 20px 96px; font-size: 15.5px;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  a { color: var(--sea); }
+  a.pl { color: inherit; text-decoration: none; border-bottom: 1px dashed var(--sea); }
+  a.pl:hover { color: var(--sea); }
+  a.bd { text-decoration: none; }
+  a:focus-visible { outline: 2px solid var(--sea); outline-offset: 2px; border-radius: 3px; }
+
+  .quicknav {
+    position: sticky; top: 0; z-index: 20; margin: 0 -20px;
+    padding: 9px 20px calc(9px + env(safe-area-inset-top, 0px) * 0);
+    background: var(--paper); border-bottom: 1px solid var(--line);
+    display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none;
+  }
+  @supports (backdrop-filter: blur(8px)) or (-webkit-backdrop-filter: blur(8px)) {
+    .quicknav { background: color-mix(in srgb, var(--paper) 86%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+  }
+  .quicknav::-webkit-scrollbar { display: none; }
+  .quicknav a {
+    flex: 0 0 auto; font-size: 12.5px; font-weight: 600; letter-spacing: .04em;
+    padding: 6px 12px; border-radius: 99px; text-decoration: none;
+    color: var(--ink); background: var(--card); border: 1px solid var(--line);
+  }
+  .quicknav a .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 5px; vertical-align: 1px; background: var(--dot, var(--sea)); }
+  .seg, section.block { scroll-margin-top: calc(var(--nav-h) + 12px); }
+
+  .hero { padding: 40px 0 8px; }
+  .eyebrow { font-size: 12px; letter-spacing: .16em; color: var(--ink-2); font-variant-numeric: tabular-nums; margin: 0 0 10px; }
+  h1 { font-size: clamp(32px, 7vw, 46px); line-height: 1.15; margin: 0; letter-spacing: .04em; text-wrap: balance; }
+  h1 small { display: block; font-size: .42em; font-weight: 500; color: var(--ink-2); letter-spacing: .1em; margin-top: 8px; }
+  .routebar { display: flex; gap: 3px; margin: 26px 0 6px; border-radius: 6px; overflow: hidden; }
+  .routebar span { color: #fff; font-size: 11.5px; letter-spacing: .04em; text-align: center; padding: 7px 2px 6px; white-space: nowrap; overflow: hidden; }
+  .routebar b { display: block; font-weight: 600; }
+  .routebar i { font-style: normal; opacity: .85; font-size: 10.5px; font-variant-numeric: tabular-nums; }
+  .legend { font-size: 12.5px; color: var(--ink-2); margin: 14px 0 0; }
+
+  .bd { display: inline-block; font-size: 11px; line-height: 1; padding: 4px 7px; border-radius: 99px; font-weight: 600; letter-spacing: .05em; vertical-align: 2px; white-space: nowrap; }
+  .bd-star { color: var(--sea); background: var(--sea-soft); }
+  .bd-booked { color: var(--ok); background: var(--ok-soft); }
+  .bd-res { color: var(--sun); background: var(--sun-soft); }
+  .bd-warn { color: var(--coral); background: var(--coral-soft); }
+  .bd-fire { color: var(--fire); background: var(--fire-soft); }
+  .bd-cash { color: var(--ink-2); background: transparent; box-shadow: inset 0 0 0 1px var(--line); }
+
+  section.block { margin-top: 48px; }
+  h2 { font-size: 21px; margin: 0 0 6px; letter-spacing: .03em; text-wrap: balance; }
+  h3.sub { font-size: 16.5px; margin: 26px 0 8px; letter-spacing: .03em; }
+  .block > p.lead { margin: 0 0 18px; color: var(--ink-2); font-size: 14px; }
+  ol.check { list-style: none; margin: 0; padding: 0; counter-reset: c; }
+  ol.check li { counter-increment: c; position: relative; padding: 12px 14px 12px 46px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; margin-bottom: 8px; font-size: 14.5px; }
+  ol.check li::before { content: counter(c, decimal-leading-zero); position: absolute; left: 14px; top: 14px; font-size: 12px; font-weight: 700; color: var(--sea); font-variant-numeric: tabular-nums; letter-spacing: .05em; }
+  ol.check .when { color: var(--ink-2); font-size: 12.5px; display: block; }
+  .tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--card); -webkit-overflow-scrolling: touch; }
+  table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 13.5px; }
+  th, td { text-align: left; padding: 9px 12px; border-top: 1px solid var(--line); vertical-align: top; }
+  thead th { border-top: 0; font-size: 12px; letter-spacing: .08em; color: var(--ink-2); }
+  td.day { white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--ink-2); }
+  .seg { margin-top: 44px; }
+  .seg-head {
+    display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
+    padding: 10px 14px; border-radius: 10px; color: #fff; background: var(--seg, var(--sea));
+    position: sticky; top: calc(var(--nav-h) + 6px); z-index: 10;
+  }
+  .seg-head h3 { margin: 0; font-size: 17px; letter-spacing: .06em; }
+  .seg-head .dates { font-size: 12.5px; opacity: .9; font-variant-numeric: tabular-nums; letter-spacing: .04em; }
+  .day { background: var(--card); border: 1px solid var(--line); border-radius: 12px; margin-top: 14px; padding: 16px 18px 14px; border-left: 3px solid var(--seg, var(--sea)); }
+  .day header { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
+  .day .dnum { font-size: 12px; font-weight: 700; letter-spacing: .1em; color: var(--sea); font-variant-numeric: tabular-nums; }
+  .day h4 { margin: 0; font-size: 16.5px; letter-spacing: .02em; }
+  .day ul { margin: 0; padding: 0; list-style: none; }
+  .day li { padding: 5px 0 5px 58px; position: relative; font-size: 14.5px; }
+  .day li .t { position: absolute; left: 0; top: 7px; width: 48px; font-size: 11.5px; font-weight: 600; color: var(--ink-2); letter-spacing: .06em; }
+  .day li + li { border-top: 1px dashed var(--line); }
+  .day .note { margin: 10px 0 0; font-size: 13px; color: var(--ink-2); }
+  .day .note b { color: var(--coral); font-weight: 600; }
+  ul.plain { margin: 0; padding-left: 1.2em; }
+  ul.plain li { margin-bottom: 6px; font-size: 14.5px; }
+  .guide { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 4px 18px 14px; margin-top: 16px; }
+  footer { margin-top: 64px; font-size: 12.5px; color: var(--ink-2); border-top: 1px solid var(--line); padding-top: 16px; }
+
+  @media (max-width: 600px) {
+    body { padding: 0 14px 72px; font-size: 15px; }
+    .quicknav { margin: 0 -14px; padding-left: 14px; padding-right: 14px; }
+    .hero { padding: 26px 0 4px; }
+    .routebar { display: grid; grid-template-columns: repeat(3, 1fr); }
+    .routebar span { font-size: 10.5px; }
+    ol.check li { padding: 10px 12px 10px 40px; }
+    ol.check li::before { left: 12px; top: 12px; }
+    .day { padding: 13px 13px 11px; }
+    .day li { padding: 22px 0 6px; }
+    .day li .t { top: 4px; width: auto; }
+    .guide { padding: 2px 13px 12px; }
+    table { min-width: 520px; font-size: 12.5px; }
+    .seg-head { top: calc(var(--nav-h) + 2px); padding: 8px 12px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav class="quicknav" aria-label="快速跳轉">
+  <a href="#checklist"><span class="dot" style="--dot:#8A5A14"></span>必辦</a>
+  <a href="#seg-naha"><span class="dot" style="--dot:#B5483F"></span>那霸</a>
+  <a href="#seg-chatan"><span class="dot" style="--dot:#C07A2B"></span>美國村</a>
+  <a href="#seg-onna"><span class="dot" style="--dot:#0E6B72"></span>恩納</a>
+  <a href="#seg-motobu"><span class="dot" style="--dot:#2B5FA3"></span>本部</a>
+  <a href="#seg-kunigami"><span class="dot" style="--dot:#3E7A4C"></span>國頭</a>
+  <a href="#seg-senaga"><span class="dot" style="--dot:#7059A8"></span>瀨長島</a>
+  <a href="#guides">攻略</a>
+  <a href="#cash">💴 現金</a>
+  <a href="#practical">備忘</a>
+</nav>
+
+<header class="hero">
+  <p class="eyebrow">2026.07.25 六 20:50 抵（IT232） — 08.09 日 18:30 飛（IT233） · 16 天 15 夜 · 親子自駕</p>
+  <h1>XIII沖<small>沙灘、寄居蟹、還有熟悉的三味線 — 行程功課總表 v2</small></h1>
+  <div class="routebar" aria-label="行程路線與夜數">
+    <span style="background:#B5483F"><b>那霸</b><i>Almont·2夜</i></span>
+    <span style="background:#C07A2B"><b>美國村</b><i>RIHGA·2夜</i></span>
+    <span style="background:#0E6B72"><b>恩納</b><i>萬麗·3夜</i></span>
+    <span style="background:#2B5FA3"><b>本部</b><i>海洋廣場·3夜</i></span>
+    <span style="background:#3E7A4C"><b>國頭</b><i>Okuma·3夜</i></span>
+    <span style="background:#7059A8"><b>瀨長島</b><i>Storyline·2夜</i></span>
+  </div>
+  <p class="legend">
+    <span class="bd bd-star">⭐ 口袋名單</span>
+    <span class="bd bd-booked">已訂</span>
+    <span class="bd bd-res">需預約</span>
+    <span class="bd bd-warn">公休陷阱</span>
+    <span class="bd bd-fire">煙火機會</span>
+    <span class="bd bd-cash">💴 現金のみ</span>
+    　·　虛線地點名＝Google Maps；橘色標章＝可點開預約。<b>租車 7/26 下午取</b>（Almont 停一晚）；8/9 約 15:30 還車。
+  </p>
+</header>
+
+<section class="block" id="checklist">
+  <h2>出發前必辦</h2>
+  <p class="lead">依急迫排序。晚餐與海豚比門票急。</p>
+  <ol class="check">
+    <li><b>萬麗海豚事前預約 ☎️ +81-98-964-5629</b>（JST 9:00–17:00）— 受理到 7/28、額滿即止（可訂エンカウンターS ¥18,000/人）。<span class="when">替代策略：全家型ハッピードルフィン（1 組 ¥25,000）只有現場制 → 7/29 14:00 入住直衝 Activity Counter 一次訂完三天。8/3 元氣村也有海豚（¥11,000/人），別重複排。</span></li>
+    <li><b>元氣村體驗預約 ☎️ 0980-51-7878</b> 或 <a class="bd bd-res" href="https://www.asoview.com/channel/activities/ja/owf/offices/3934/courses" target="_blank" rel="noopener">asoview 線上 ↗</a>：8/1 15:30 もぐもぐピクニック、8/3 14:00 ドルフィンエンカウンター、8/4 8:30 おはようドルフィン <span class="when">暑假常滿員；前日 15:00 後取消收 100%</span></li>
+    <li>✅ <b>兩個訂房方案皆已確認</b>：萬麗 Flash Sale 條款明載 Club Savvy（旺季 3 晚＝<b>Light</b>）＋每日含早＋一次 Choice Dinner（2 大人）、Deluxe 房型可用山田溫泉＋Lounge（現場確認）；<b>Marine Piazza 確定チャレンジクーポン対象 → 12 枚到手</b>（≈¥6,000–7,000；8/1 入住時櫃檯領取）</li>
+    <li>✅ <b>瀨長島住宿已定案：Storyline</b>（訂房後電話確認頂樓泳池／溫泉 SPA 對尿布兒的規定）</li>
+    <li><b>萬麗晚餐 TableCheck 三晚</b>：<b>Choice Dinner（方案附）建議用 7/30 <a href="https://www.tablecheck.com/en/shops/sailfishcafe-renaissance-okinawa-resort/reserve" target="_blank" rel="noopener">Sailfish 自助</a></b>（當天 Coral 休；免費選項＝Sailfish/Coral BBQ/海風，+¥1,100 ロイズ・彩，+¥2,200 Four Seasons）；7/29 訂 Coral 或ロイズ（Sailfish 三休）、7/31 訂海風或 Coral（ロイズ五休）<span class="when">3–12 歲兒童指定餐廳晚餐免費（4–10 月）；Choice Dinner 第 3 人加價現場確認</span></li>
+    <li><b>奧間晚餐</b>：8/5 びすとろ海畑 ☎️ 0980-41-2325（💴）或 <a class="bd bd-res" href="https://www.tablecheck.com/shops/okumaresort-adan/reserve" target="_blank" rel="noopener">鉄板焼あだん ↗</a>（僅 8/5・8/6 可）；8/6 <a class="bd bd-res" href="https://www.tablecheck.com/shops/okumaresort-beachside/reserve" target="_blank" rel="noopener">Beachside BBQ ↗</a>；8/4 サーフサイド 17:30 早鳥（兒童半價）</li>
+    <li><b>fuu cafe</b> 8/2 晚 ☎️ 0980-47-4885；<b>POSILLIPO</b> 8/7 <a class="bd bd-res" href="https://www.tablecheck.com/en/shops/posillipo-okinawa/reserve" target="_blank" rel="noopener">TableCheck ↗</a></li>
+    <li><b>門票</b>：美ら海 <a class="bd bd-res" href="https://churaumi.okinawa/" target="_blank" rel="noopener">Web 夕方票 ↗</a>（8/3 夜用；大人 ¥1,730、未就學免費）；DMM <a class="bd bd-res" href="https://kariyushi-aquarium.com/fee-ticket/" target="_blank" rel="noopener">前日 9 折 ↗</a>（8/7 買 8/8）</li>
+    <li><b>山原玩具博物館</b>休館日確認 ☎️ 0980-50-1022（已排最安全的 8/5 三）</li>
+    <li>（選配）笑味の店 8/7 午（💴 完全預約制、8/6 前 ☎️ 0980-44-3220）；首里琉染 7/26（無車，單軌＋計程車）<a class="bd bd-res" href="https://www.shuri-ryusen.com/course/sango.html" target="_blank" rel="noopener">官網預約 ↗</a></li>
+    <li><b>已確認條款</b>：萬麗 3–5 歲兒童設施費 7/1–9/30 為 ¥6,050/晚（平時 ¥4,400；2 歲以下免）；壽司 DIY 確定放棄（限小學生以上）</li>
+  </ol>
+  <p class="lead" style="margin-top:16px">To Do 補充：長袖水母衣＋寬簷帽、揹巾、食用醋（水母急救）、現金約 ¥55,000–60,000、<b>手電筒（奧間夜灘找寄居蟹＋觀星）</b>、泳池尿布（萬麗/Okuma 泳池要求）、安全座椅金屬扣先散熱。</p>
+</section>
+
+<section class="block" id="days">
+  <h2>逐日行程 v2</h2>
+  <p class="lead">作息原則：早餐 8–10、退房用滿到 11:00、愜意路線不趕早（例外只有硬性場次：8/4 8:30 海豚健檢在飯店門口、水牛車 11 點場）。上午一個點、午睡避暑、傍晚再出門。</p>
+
+  <div class="seg" id="seg-naha" style="--seg:#B5483F">
+    <div class="seg-head"><h3>那霸 · Almont 縣廳前</h3><span class="dates">Day 1–3 · 7/25–7/27 · 7/26 下午取車 · 無早餐</span></div>
+    <article class="day">
+      <header><span class="dnum">DAY 1 · 7/25 六</span><h4>20:50 抵達</h4></header>
+      <ul>
+        <li><span class="t">20:50</span>落地 → 入境 → 計程車約 15 分到飯店（單軌 13 分備案）</li>
+        <li><span class="t">夜</span>便利商店補水補尿布 → 就寢。今天沒有行程。</li>
+      </ul>
+      <p class="note">租車行已關門，取車排 7/26 下午。名護夏まつり煙火（7/25–26）確定放棄——單程 2 小時不合理。</p>
+    </article>
+    <article class="day">
+      <header><span class="dnum">DAY 2 · 7/26 日</span><h4>RYUBO＋國際通封街日</h4></header>
+      <ul>
+        <li><span class="t">8:00</span><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=BETTER+GIRL+那覇市久茂地" target="_blank" rel="noopener">Better Girl</a><span class="bd bd-star">⭐</span>（週日有開、<b>8:00 開門</b>；不定休前晚查 <a href="https://www.instagram.com/bettergirloka/" target="_blank" rel="noopener">IG</a>）；備案：福助玉子燒（7:30 外帶 💴）、RYUBO 2F 樂園CAFÉ（8:00）、1F モス（7:00）</li>
+        <li><span class="t">10:00</span><b><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=デパートリウボウ+パレットくもじ+那覇" target="_blank" rel="noopener">RYUBO</a> 開店直上 7F The Kids</b>（假日 3h ¥1,200；<a href="https://www.asoview.com/base/162074/" target="_blank" rel="noopener">asoview 9 折</a>）＋ DISNEY コーナー</li>
+        <li><span class="t">11:30</span>午餐第一優先 RYUBO 1F <b>EIBUN palette</b><span class="bd bd-star">⭐</span><span class="bd bd-cash">完全無現金</span>（2026/4 新開；¥1,000–1,600；開幕熱潮 11:30 前入店或 <a href="https://ryubo.jp/eibun-palette/" target="_blank" rel="noopener">EPARK 取號</a>）；備案 2F FOOD HALL；想吃 INDIGO（週一休＝今天唯一）就把午餐讓給它</li>
+        <li><span class="t">12:30</span>回 Almont 午睡（步行 3 分）→ <span class="t" style="position:static;width:auto">15:00</span> <b>取租車</b>（停回飯店約 ¥1,100/晚）</li>
+        <li><span class="t">16:00</span><b>國際通封街體驗</b>（12:00–18:00 車道開放；露天座＋大道芸/エイサー街頭表演，每週陣容不同、前一天查<a href="https://naha-kokusaidori.okinawa/en/eventinfo.html" target="_blank" rel="noopener">商店街活動頁</a>；雨天中止）— 16 時後較涼，騎樓可躲太陽</li>
+        <li><span class="t">18:30</span><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=沖縄の台所ぱいかじ+国際通り店+久茂地" target="_blank" rel="noopener">沖縄の台所ぱいかじ 国際通り店</a>（久茂地産業ビル 2F；17:00– 無休；座敷 40 席）<span class="bd bd-booked">已訂</span> — <b>三線 Live 19:30–20:00</b>（¥550/人），18:30 入座吃到 Live 結束剛好回家睡；098-868-8557 可順問兒童椅</li>
+      </ul>
+      <p class="note"><b>今日陷阱：</b>牧志市場休（第 4 週日）；波之上海灘降為體力有餘的選配。</p>
+    </article>
+    <article class="day">
+      <header><span class="dnum">DAY 3 · 7/27 一</span><h4>万丸 → 首里城・達磨寺 → 北谷</h4></header>
+      <ul>
+        <li><span class="t">8:30</span><b><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=甘味処万丸+那覇市泉崎" target="_blank" rel="noopener">万丸</a></b>モーニング約 ¥600（供應到 11:00）<span class="bd bd-star">⭐</span><span class="bd bd-warn">平日限定＝今天唯一機會</span><span class="bd bd-cash">💴 現金＋QR</span> → 回飯店收行李</li>
+        <li><span class="t">11:00</span>退房出發 → 11:15 <a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=あじとや+首里城店+那覇市首里崎山町" target="_blank" rel="noopener">あじとや 首里城店</a>黑糖湯咖哩（11:00 開、售完打烊）<span class="bd bd-warn">不可預約 → 開店直後最保險</span> — <b>辣度 0 幼兒可吃</b>、白飯湯可續；店前後共 8 台</li>
+        <li><span class="t">12:15</span><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=首里城公園+首里杜館" target="_blank" rel="noopener">首里城公園</a>（大人 ¥400、<b>未滿 6 歲免費</b>；<b>正殿外觀已復元完成</b>、內部 11/23 才開放，見學デッキ看紅瓦＋龍頭棟飾；先進首里杜館吹冷氣＋免費借嬰兒車、走無障礙路線，<b>全程抓 1 小時</b>；停車 3 小時內上限 ¥1,000。正中午偏熱：太熱就只看免費區＋見學デッキ）</li>
+        <li><span class="t">13:30</span><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=達磨寺+西来院+那覇市首里赤田町" target="_blank" rel="noopener">達磨寺（西来院）</a>（首里城東側步行約 10 分；免費、約 15 分鐘；達摩繪馬御守；寺旁停車窄 → 車留首里城走過去）</li>
+        <li><span class="t">14:15</span>北上（車約 45 分，小孩車上睡）→ 15:00 RIHGA 入住（原摩天輪位置）補午睡</li>
+        <li><span class="t">17:00</span><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=安良波公園+北谷町" target="_blank" rel="noopener">安良波公園</a>（免費停車 7:00–22:00、週一好停；2024 翻新船型大遊具）＋アラハビーチ夕陽；或 18F 無邊際泳池（9:00–20:00）</li>
+        <li><span class="t">晚餐</span><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=北谷殿内+北谷町美浜" target="_blank" rel="noopener">北谷殿内</a>（無休；只收 VISA/Master）→ Boardwalk 夜景</li>
+      </ul>
+      <p class="note">首里琉染就在首里城旁（想加珊瑚染需預約）。牧志市場、宜野灣公園這趟讓路給首里。</p>
+    </article>
+  </div>
+
+  <div class="seg" id="seg-chatan" style="--seg:#C07A2B">
+    <div class="seg-head"><h3>美國村 · RIHGA Royal</h3><span class="dates">Day 3–5 · 7/27–7/29 · 無早餐（1F AURDIA 可付費）</span></div>
+    <article class="day">
+      <header><span class="dnum">DAY 4 · 7/28 二</span><h4>北谷親子日＋魔術晚餐</h4></header>
+      <ul>
+        <li><span class="t">早</span><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=GOOD+DAY+COFFEE+北谷町砂辺" target="_blank" rel="noopener">GOOD DAY COFFEE</a>（6:00、車 5 分）或 <a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=ミナミノカフェ+北谷町美浜" target="_blank" rel="noopener">Minamino Cafe</a>（7:00）<span class="bd bd-star">⭐</span>；鬆餅 <a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=パンケーキ+KUPUKUPU+北谷町" target="_blank" rel="noopener">KUPUKUPU</a><span class="bd bd-warn">週三休＝限今天</span></li>
+        <li><span class="t">上午</span><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=サンセットビーチ+北谷町" target="_blank" rel="noopener">Sunset Beach</a>（9:00–18:00；水母網＋救生員；人工灣浪平）→ 美國村午餐</li>
+        <li><span class="t">午後</span>避暑：<a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=イオンモール沖縄ライカム+北中城村" target="_blank" rel="noopener">AEON 沖縄ライカム</a>（車 20 分；大水槽＋美食街，也有 Blue Seal 可麗餅門市）或回飯店泳池＋午睡</li>
+        <li><span class="t">17:00</span><b><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=MAGIC+OCEAN+北谷町美浜" target="_blank" rel="noopener">Magic Ocean</a></b> 18:00 開演 <span class="bd bd-booked">已訂</span></li>
+        <li><span class="t">散場後</span>Boardwalk 夜景散步（美國村夏祭花火只在週五・六 19:00–20:00 → 本趟北谷段無煙火；煙火看奧間 8/4・8/6）</li>
+      </ul>
+    </article>
+    <article class="day">
+      <header><span class="dnum">DAY 5 · 7/29 三</span><h4>可麗餅之日 → 萬麗（搶活動櫃檯）</h4></header>
+      <ul>
+        <li><span class="t">早</span>飯店 AURDIA buffet（7:00；4 歲+ ¥1,012、3 歲以下免費）或 <a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=ポーたま+北谷アメリカンビレッジ店" target="_blank" rel="noopener">ポーたま北谷店</a>（7:00）</li>
+        <li><span class="t">11:00</span>8–10 早餐＋泳池收尾後退房 → <b><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=ブルーシール+デポアイランド店+北谷町" target="_blank" rel="noopener">Blue Seal 可麗餅</a> — 今天 29 日優惠日</b><span class="bd bd-star">⭐</span> → 12:00 北上，午餐<a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=おんなの駅なかゆくい市場+恩納村" target="_blank" rel="noopener">恩納之驛なかゆくい市場</a>（萬麗車 5 分）</li>
+        <li><span class="t">14:00</span><b>萬麗 check-in → 直衝 Activity Counter</b>：訂三天ハッピードルフィン/スプラッシュ/クマノミ号＋填海豚健康調查書</li>
+        <li><span class="t">午後</span>Reef Garden 海龜潟湖（免費）→ 室內泳池</li>
+        <li><span class="t">17:30</span>海賊船クルーズ（三・五開催；未就學免費）→ 晚餐 Coral Seaview 或ロイズ<span class="bd bd-warn">Sailfish 週三休</span><span class="bd bd-res">TableCheck</span>→ <b>縁日（每晚 17–21）＋ Family Festa（一三五）</b></li>
+      </ul>
+    </article>
+  </div>
+
+  <div class="seg" id="seg-onna" style="--seg:#0E6B72">
+    <div class="seg-head"><h3>恩納 · Renaissance 萬麗</h3><span class="dates">Day 5–8 · 7/29–8/1 · Club Savvy Light ✅</span></div>
+    <article class="day">
+      <header><span class="dnum">DAY 6 · 7/30 四</span><h4>海豚主日</h4></header>
+      <ul>
+        <li><span class="t">早</span>私人海灘 8:00 開（水母網＋救生員；傘椅免費）</li>
+        <li><span class="t">10:00</span>ドルフィンエンカウンターS（若電話訂到）或玩水</li>
+        <li><span class="t">午後</span>午睡 → 15:00 ハッピードルフィン（現場制）或 16:00 スプラッシュ（Light 半價 ≈¥1,750）</li>
+        <li><span class="t">晚餐</span><b>Choice Dinner 用今天：Sailfish 自助</b>（3–12 歲免費）<span class="bd bd-warn">Coral 週四休</span>→ 縁日</li>
+      </ul>
+    </article>
+    <article class="day">
+      <header><span class="dnum">DAY 7 · 7/31 五</span><h4>萬座毛＋なかむらそば</h4></header>
+      <ul>
+        <li><span class="t">早</span>室外泳池／Kids Splash 噴水區 → 10:30 クマノミ号觀魚船（未就學免費）</li>
+        <li><span class="t">午</span><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=なかむらそば+恩納村瀬良垣" target="_blank" rel="noopener">なかむらそば</a>（車 20 分）<span class="bd bd-cash">💴 食券機</span><span class="bd bd-warn">8/1 起漲價＝最後舊價日</span>→ <a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=万座毛+恩納村" target="_blank" rel="noopener">萬座毛</a>（¥100、未上小學免費）→ <a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=おんなの駅なかゆくい市場+恩納村" target="_blank" rel="noopener">恩納之驛</a>琉冰<span class="bd bd-cash">💴</span></li>
+        <li><span class="t">午後</span>午睡 → 海灘/泳池 → 17:30 海賊船（五開催）</li>
+        <li><span class="t">晚餐</span>海風爐端燒或 Coral<span class="bd bd-warn">ロイズ週五休</span>→ 縁日＋Family Festa</li>
+      </ul>
+    </article>
+    <article class="day">
+      <header><span class="dnum">DAY 8 · 8/1 六</span><h4>萬麗 → 海洋廣場 · 元氣村開場</h4></header>
+      <ul>
+        <li><span class="t">早</span>（選配・滿 3 歲）8:00 もぐりんパ → 8–10 早餐 → 11:00 退房</li>
+        <li><span class="t">11:20</span><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=ブセナ海中公園+名護市" target="_blank" rel="noopener">Busena 海中公園</a>玻璃底船（車 20 分走高速；免預約；售票處刷卡限 16:00 前）</li>
+        <li><span class="t">13:00</span><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=山原そば+本部町伊豆味" target="_blank" rel="noopener">山原そば</a><span class="bd bd-star">⭐</span><span class="bd bd-warn">週一二休＝今明限定・13 時有售完風險</span><span class="bd bd-cash">💴</span> — 重視這碗就反過來「12:00 先麵、回頭搭 14:00 的船」；備案きしもと八重岳店（–19:00 無休）。許田 IC 會塞，移動抓寬鬆</li>
+        <li><span class="t">14:00</span><b>Marine Piazza check-in → 領チャレンジクーポン 12 枚</b></li>
+        <li><span class="t">15:30</span><b>もぐもぐピクニック</b>（餵海豚海龜山羊 ¥4,000）<span class="bd bd-res">需已預約</span>→ 中庭与那国馬＋夕陽</li>
+        <li><span class="t">晚餐</span>BREEZE（券換兒童餐；未就學附白飯湯免費）</li>
+      </ul>
+    </article>
+  </div>
+
+  <div class="seg" id="seg-motobu" style="--seg:#2B5FA3">
+    <div class="seg-head"><h3>本部 · Marine Piazza（元氣村旁）</h3><span class="dates">Day 8–11 · 8/1–8/4 · 早餐免費 · 挑戰券 12 枚 ✅</span></div>
+    <article class="day">
+      <header><span class="dnum">DAY 9 · 8/2 日</span><h4>水族館＋水牛車日</h4></header>
+      <ul>
+        <li><span class="t">9:30</span>8–10 早餐（BREEZE 免費）後入館<a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=沖縄美ら海水族館+本部町" target="_blank" rel="noopener">美ら海水族館</a>（車 5 分；未滿 6 歲免費；避正午人潮即可）</li>
+        <li><span class="t">11:15</span><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=備瀬のフクギ並木+本部町" target="_blank" rel="noopener">備瀨水牛車</a><span class="bd bd-warn">週六日限定</span><span class="bd bd-cash">🔶 ¥2,000/車</span>＋福木林道</li>
+        <li><span class="t">午</span><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=きしもと食堂+本店+本部町渡久地" target="_blank" rel="noopener">きしもと食堂</a><span class="bd bd-cash">💴 兩店皆現金</span>→ 午睡</li>
+        <li><span class="t">午後</span>室內泳池（幼兒池）或貝殼工藝（4 歲+，券 2 枚）→ 傍晚<a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=エメラルドビーチ+本部町" target="_blank" rel="noopener">翡翠海灘</a>＋噴水広場</li>
+        <li><span class="t">晚餐</span><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=fuu+cafe+本部町瀬底" target="_blank" rel="noopener">fuu cafe</a>（18:00–20:00）<span class="bd bd-res">已預約</span></li>
+      </ul>
+    </article>
+    <article class="day">
+      <header><span class="dnum">DAY 10 · 8/3 一</span><h4>古宇利＋海豚觸摸日</h4></header>
+      <ul>
+        <li><span class="t">9:30</span>8–10 早餐後出發<a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=古宇利ビーチ+今帰仁村" target="_blank" rel="noopener">古宇利海灘</a>（車 30 分，玩到 11:15）→ 回程 <a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=The+Sinmay+今帰仁村玉城" target="_blank" rel="noopener">The Sinmay</a><span class="bd bd-star">⭐</span><span class="bd bd-cash">📱 卡不可</span></li>
+        <li><span class="t">午</span>BREEZE（券）或<a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=伊豆味そば+本部町" target="_blank" rel="noopener">伊豆味そば</a><span class="bd bd-cash">💴</span>→ 午睡</li>
+        <li><span class="t">14:00</span><b>ドルフィンエンカウンター＠元氣村</b>（¥11,000/人；0 歲+；13:30 報到）<span class="bd bd-res">需已預約</span></li>
+        <li><span class="t">17:30</span><b>夜間水族館</b>（8 月至 21:00）<a class="bd bd-res" href="https://churaumi.okinawa/" target="_blank" rel="noopener">Web 夕方票 ↗</a>；體力足加碼<a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=今帰仁城跡+今帰仁村" target="_blank" rel="noopener">今歸仁城跡</a>（至 19:00）</li>
+        <li><span class="t">晚餐</span><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=ちぬまん+美ら海水族館前店+本部町" target="_blank" rel="noopener">ちぬまん</a>（16:00–23:00 無休）</li>
+      </ul>
+      <p class="note">山原そば週一休。JUNGLIA 車流週一較鬆。</p>
+    </article>
+    <article class="day">
+      <header><span class="dnum">DAY 11 · 8/4 二</span><h4>→ Okuma · 島唄花火夜</h4></header>
+      <ul>
+        <li><span class="t">8:30</span><b>おはようドルフィン</b>（晨間健檢見學；挑戰券 2 枚×2）→ 早餐 → 11:00 退房</li>
+        <li><span class="t">上午</span><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=DINO恐竜PARK+やんばる亜熱帯の森+名護市中山" target="_blank" rel="noopener">DINO 恐龍 PARK</a>（3 歲以下免費）<a class="bd bd-res" href="https://www.asoview.com/base/155217/" target="_blank" rel="noopener">asoview 折扣 ↗</a></li>
+        <li><span class="t">午</span><b><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=沖縄そば+むかしむかし+名護市中山" target="_blank" rel="noopener">從前從前</a></b><span class="bd bd-star">⭐</span><span class="bd bd-warn">週三四休＝今天剛好</span><span class="bd bd-cash">💴</span></li>
+        <li><span class="t">午後</span>58 號北上 → <b><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=結の浜公園+大宜味村塩屋" target="_blank" rel="noopener">結の浜公園</a></b><span class="bd bd-star">⭐</span>→ <b>Okuma check-in → Beach Info Desk：買 Passport＋依乾潮排「潮溜まりツアー」＋玻璃底船/ベイビーマーブル/觀星</b></li>
+        <li><span class="t">17:30</span>サーフサイド早鳥 Buffet（兒童半價）→ 20:15 島唄 Live → <b>21:00 花火</b><span class="bd bd-fire">🎆 官方確認</span></li>
+      </ul>
+    </article>
+  </div>
+
+  <div class="seg" id="seg-kunigami" style="--seg:#3E7A4C">
+    <div class="seg-head"><h3>國頭 · Okuma 度假村</h3><span class="dates">Day 11–14 · 8/4–8/7 · 花火二四六 21:00 · 洗衣站</span></div>
+    <article class="day">
+      <header><span class="dnum">DAY 12 · 8/5 三</span><h4>山原玩具日＋海灘尋寶</h4></header>
+      <ul>
+        <li><span class="t">上午</span><b><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=やんばる森のおもちゃ美術館+国頭村辺土名" target="_blank" rel="noopener">山原森玩具博物館</a></b><span class="bd bd-star">⭐</span>＋<a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=国頭村森林公園" target="_blank" rel="noopener">森林公園</a> 30m 滑梯＋<a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=辺土名児童公園+国頭村" target="_blank" rel="noopener">辺土名児童公園</a><span class="bd bd-star">⭐</span><span class="bd bd-warn">停車僅 4 台</span></li>
+        <li><span class="t">午</span><b><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=まるひら食堂+国頭村宇嘉" target="_blank" rel="noopener">まるひら食堂</a></b><span class="bd bd-star">⭐</span><span class="bd bd-cash">📱 卡不可</span>→ 回村午睡</li>
+        <li><span class="t">16:20</span><b>ビーチで宝探し</b>（週三開催；幼兒可；免預約，棧橋集合）</li>
+        <li><span class="t">晚餐</span><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=びすとろ海畑+国頭村辺土名" target="_blank" rel="noopener">びすとろ海畑</a><span class="bd bd-cash">💴</span><span class="bd bd-res">需預約</span>或鉄板焼あだん（僅 8/5・8/6）</li>
+        <li><span class="t">夜</span>觀星團（當日 17 時前約；天文台 3–5 歲 ¥1,100）或<b>夜灘手電筒找陸寄居蟹</b>（天然紀念物，看不帶走）</li>
+      </ul>
+    </article>
+    <article class="day">
+      <header><span class="dnum">DAY 13 · 8/6 四</span><h4>本島最北端＋Eisa 花火夜</h4></header>
+      <ul>
+        <li><span class="t">9:30</span>8–10 早餐後出發 <a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=大石林山+ASMUI+国頭村" target="_blank" rel="noopener">ASMUI（大石林山）</a>無障礙路線可推車 <a class="bd bd-res" href="https://asmui.com/" target="_blank" rel="noopener">購票 ↗</a>→ <a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=辺戸岬+国頭村" target="_blank" rel="noopener">辺戸岬</a>＋<a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=ヤンバルクイナ展望台+国頭村" target="_blank" rel="noopener">ヤンバルクイナ展望台</a></li>
+        <li><span class="t">午</span><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=道の駅ゆいゆい国頭+国頭村" target="_blank" rel="noopener">道の駅ゆいゆい国頭</a><span class="bd bd-cash">🔶 只收 JCB/AMEX/Diners</span>＋<b>クニガミドーナツ中午買</b></li>
+        <li><span class="t">15:00</span><b>玻璃底船（未滿 6 歲免費）</b>＋ベイビーマーブル（1–2 歲可上的家庭拖曳圈 ¥5,500/組）或泳池</li>
+        <li><span class="t">17:30</span>Beachside BBQ <span class="bd bd-res">已預約</span>→ 20:15 エイサー太鼓 → <b>21:00 花火</b><span class="bd bd-fire">🎆 官方確認</span></li>
+      </ul>
+      <p class="note">潮池導覽若乾潮落在今天下午 → 優先讓位（寄居蟹主題契合度最高）。比地大滝、ター滝幼兒不可 → Next Time。</p>
+    </article>
+    <article class="day">
+      <header><span class="dnum">DAY 14 · 8/7 五</span><h4>→ 瀨長島</h4></header>
+      <ul>
+        <li><span class="t">早</span>泳池 8:00／海灘收尾（Passport 退房後仍可用）→ 11:00 退房</li>
+        <li><span class="t">早午餐</span><b><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=そば処+入り門家+国頭村桃原" target="_blank" rel="noopener">入り門家</a></b>（11:30–；週五開）<span class="bd bd-star">⭐</span>或 <a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=笑味の店+大宜味村" target="_blank" rel="noopener">笑味の店</a><span class="bd bd-res">8/6 前預約</span><span class="bd bd-cash">💴 兩家皆現金</span></li>
+        <li><span class="t">順路</span><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=道の駅おおぎみ+大宜味村" target="_blank" rel="noopener">道の駅おおぎみ</a>→<a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=しまドーナッツ+名護市伊差川" target="_blank" rel="noopener">しまドーナッツ</a><span class="bd bd-cash">📱 卡不可</span>→ 南下 2h</li>
+        <li><span class="t">傍晚</span>瀨長島 check-in → <a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=瀬長島ウミカジテラス+豊見城市" target="_blank" rel="noopener">Umikaji Terrace</a>：18:30 卡位飛機＋夕陽 → 19:30 投影秀</li>
+        <li><span class="t">晚餐</span><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=POSILLIPO+瀬長島" target="_blank" rel="noopener">POSILLIPO</a><span class="bd bd-res">已預約</span>或<a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=タコライスcafeきじむなぁ+ウミカジテラス" target="_blank" rel="noopener">きじむなぁ</a>（只收 VISA/Master）</li>
+      </ul>
+      <p class="note">Storyline（已定案）：頂樓泳池＋泳裝溫泉 SPA 到 21:00（尿布兒規定先電話確認）。<a href="https://www.google.com/maps/search/?api=1&amp;query=琉球温泉龍神の湯+瀬長島" target="_blank" rel="noopener">龍神之湯</a>包尿布幼兒不可入浴池。</p>
+    </article>
+  </div>
+
+  <div class="seg" id="seg-senaga" style="--seg:#7059A8">
+    <div class="seg-head"><h3>瀨長島 · Storyline</h3><span class="dates">Day 14–16 · 8/7–8/9 · 18:30 起飛＝最後一天有完整上午</span></div>
+    <article class="day">
+      <header><span class="dnum">DAY 15 · 8/8 六</span><h4>DMM 水族館日</h4></header>
+      <ul>
+        <li><span class="t">上午</span><b><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=DMMかりゆし水族館+豊見城市豊崎" target="_blank" rel="noopener">DMM Kariyushi 水族館</a></b>（9:00 開；0–3 歲免費；tetote 動物互動）<a class="bd bd-res" href="https://kariyushi-aquarium.com/fee-ticket/" target="_blank" rel="noopener">前日票 9 折 ↗</a></li>
+        <li><span class="t">午</span><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=イーアス沖縄豊崎+豊見城市" target="_blank" rel="noopener">iias</a> 美食街 → 午睡或 <a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=リトルユニバースオキナワ+豊見城市" target="_blank" rel="noopener">Little Universe</a></li>
+        <li><span class="t">傍晚</span><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=豊崎美らSUNビーチ+豊見城市" target="_blank" rel="noopener">美らSUN海灘</a>（有網；停車機備零錢）或<a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=豊崎にじ公園+豊見城市" target="_blank" rel="noopener">にじ公園</a>；或回 Storyline 泳池＋SPA</li>
+        <li><span class="t">晚餐</span><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=糸満漁民食堂+糸満市西崎" target="_blank" rel="noopener">糸滿漁民食堂</a>（17:50 到場；可刷卡）或<a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=糸満漁協お魚センター+糸満市" target="_blank" rel="noopener">お魚センター</a><span class="bd bd-cash">🔶 攤販現金</span></li>
+      </ul>
+      <p class="note">南部圈替代案（<a href="https://gangala.com/" target="_blank" rel="noopener">Gangala 前日預約</a>＋玉泉洞＋奧武島＋知念岬＋平和祈念）保留備用。</p>
+    </article>
+    <article class="day">
+      <header><span class="dnum">DAY 16 · 8/9 日</span><h4>完整上午 → 18:30 起飛</h4></header>
+      <ul>
+        <li><span class="t">早</span>悠閒早餐（Storyline 野餐籃可拎去泳池邊）→ Umikaji 早場散步（10:00 開店前最好拍）或 DMM 二刷／にじ公園</li>
+        <li><span class="t">11:00</span>Storyline 退房 →<a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=イオンスタイル豊崎+豊見城市" target="_blank" rel="noopener">AEON Style 豊崎</a>＋<a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=沖縄アウトレットモールあしびなー+豊見城市" target="_blank" rel="noopener">Ashibinaa</a>採買 → iias 午餐</li>
+        <li><span class="t">15:00</span>出發還車（瀨長島→機場 10–15 分）→ 16:30 前到國際線櫃檯 → 18:30 IT233 起飛</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="block" id="guides">
+  <h2>專題攻略</h2>
+
+  <div class="guide">
+  <h3 class="sub">① RYUBO 琉貿百貨／パレットくもじ（縣廳前直結，飯店步行 3 分）</h3>
+  <ul class="plain">
+    <li><b>7F The Kids</b>：平日 1 日 ¥1,000／假日 3h ¥1,200・1 日 ¥1,500＋大人 ¥500；0 歲免費；可帶飲食自由進出；16 時後家族ナイト較省；<a href="https://www.asoview.com/base/162074/" target="_blank" rel="noopener">asoview 9 折</a></li>
+    <li>親子：7F DISNEY コーナー；6F 赤ちゃんの城＋タオル美術館；<b>8F ベビー休憩室</b>（無印內；授乳 3 間、尿布台 6）；1F 租嬰兒車</li>
+    <li>吃：<b>2F RYUBO FOOD HALL（2025/11 新開）</b>含 oHacorté fruit table；B1 デパ地下；2F 樂園CAFÉ 8:00 開；<b>1F EIBUN palette</b>（沖繩麵口袋名單百貨店分店）</li>
+    <li>買：2F 樂園百貨店（質感沖繩選物）；1F 化妝品 20 櫃＋ロイズ石垣島；8F 無印/Francfranc/文具；免稅 1F（稅前 ¥5,000 起、手續費 2.1%）</li>
+    <li>⚠️ 4F 歷史博物館 2025/8 閉館、7F 書店 2024/5 閉店（繪本改去美栄橋ジュンク堂）；9F 電影院兒童 ¥1,000；10F 免費屋頂花園；<a href="https://ryubo.jp/eventcalendar/" target="_blank" rel="noopener">活動日曆</a></li>
+  </ul>
+  </div>
+
+  <div class="guide">
+  <h3 class="sub">② 早餐總表（那霸・美國村飯店皆無早餐）</h3>
+  <div class="tablewrap"><table>
+    <thead><tr><th>天</th><th>首選</th><th>備選</th></tr></thead>
+    <tbody>
+      <tr><td class="day">7/26 日</td><td><b>Better Girl 8:00</b>（週日有開；不定休看 IG）</td><td>福助玉子燒 7:30（💴）、RYUBO 樂園CAFÉ 8:00、1F モス 7:00、oHacorté 7:30</td></tr>
+      <tr><td class="day">7/27 一</td><td><b>万丸 7:00 — 唯一機會</b>（💴 現金+QR、約 ¥600）</td><td>ポーたま牧志 7:00</td></tr>
+      <tr><td class="day">7/28 二</td><td>GOOD DAY COFFEE 6:00（車 5 分）</td><td>Minamino 7:00；鬆餅 KUPUKUPU（週三休→限今天）</td></tr>
+      <tr><td class="day">7/29 三</td><td>RIHGA 1F AURDIA buffet 7:00（4 歲+ ¥1,012）</td><td>ポーたま北谷店 7:00、VONGO 8:00</td></tr>
+    </tbody>
+  </table></div>
+  <p class="lead" style="margin-top:8px">⚠️ Lulu's pancake 查無此店（可能記錯）；ZHYVAGO 9:00 開偏晚當咖啡點。</p>
+  </div>
+
+  <div class="guide">
+  <h3 class="sub">③ 萬麗 Renaissance（7/29–8/1・Club Savvy Light 已確認）</h3>
+  <ul class="plain">
+    <li>✅ <b>訂房已確認（Flash Sale 方案）</b>：每日含早（Sailfish/彩）＋一次 Choice Dinner（2 大人；免費選 Sailfish 自助/Coral BBQ/海風，+¥1,100 ロイズ・彩，+¥2,200 Four Seasons）＋條款明載 Club Savvy（旺季 3 晚＝Light、4 晚以上完整版）；<b>Deluxe Wing Coast 海景房 → Light 可用山田溫泉＋Savvy Lounge</b>（現場確認）；免費取消至 7/22</li>
+    <li><b>海豚</b>：ハッピードルフィン 1 組 ¥25,000（現場制、全家互動最划算）｜スプラッシュ ¥3,500（Light 半價）｜エンカウンターS ¥18,000/人（☎️ 事前）｜アドベンチャー 130cm+ 幼兒不可｜海豚郵便屋 ¥300｜潟湖免費看</li>
+    <li><b>免費/超值</b>：Reef Garden 海龜潟湖、Kids Splash 噴水區、室內外泳池（幼兒池＋滑水道；泳池尿布 OK）、<b>縁日每晚 17–21</b>、Family Festa 一三五、クマノミ号/海賊船未就學免費、<b>洗衣免費</b>、客房洗脫烘＋微波爐</li>
+    <li>Club Savvy <b>Light</b>：60+ 活動免費/半價＋<b>3–12 歲指定餐廳晚餐免費</b>；溫泉/Lounge 限 Deluxe 房型以上（你們符合）</li>
+    <li>晚餐公休：一 彩｜二 フォーシーズン｜三 Sailfish｜四 Coral Seaview｜五 ロイズ</li>
+    <li>⚠️ 3–5 歲不佔床設施費 ¥6,050/晚（7–9 月；2 歲免）；颱風停開看<a href="https://renaissance-okinawa.com/pages/activity-program-status" target="_blank" rel="noopener">運行狀況頁</a></li>
+  </ul>
+  </div>
+
+  <div class="guide">
+  <h3 class="sub">④ 海洋廣場 Marine Piazza × もとぶ元気村（8/1–8/4）</h3>
+  <ul class="plain">
+    <li>✅ <b>チャレンジクーポン已確認対象方案</b>：每人每晚 2 枚（小學生以上）＝<b>12 枚</b>（8/1 入住時櫃檯領取）≈ ¥6,000–7,000；可換おはようドルフィン 2 枚、貝殼工藝 2 枚、釣堀 3 枚、BREEZE 兒童餐 2 枚等；<b>海豚スイム/エンカウンター不可用券</b>；陪同大人出同枚數</li>
+    <li><b>海豚全部 0 歲+ 可</b>（大人付費陪同；110cm 才能同游）：エンカウンター ¥11,000（淺水觸摸，幼兒最適）｜もぐもぐピクニック ¥4,000｜おはよう ¥1,200｜半潛艇 4 歲以下免費</li>
+    <li>預約 ☎️ 0980-51-7878 或 <a href="https://www.asoview.com/channel/activities/ja/owf/offices/3934/courses" target="_blank" rel="noopener">asoview</a>；<b>前日 15:00 後取消 100%</b>；文化體驗多 4 歲+（貝殼相框/風鈴 ¥1,500 雨備）</li>
+    <li>飯店：<b>早餐免費</b>（BREEZE 7:00–9:30）；室內泳池＋幼兒池 0.5m（13–21 時，雨備）；大浴場「珊瑚の湯」；中庭与那国馬＋可玩手持煙火；兒童睡衣 90cm 起；洗衣 ¥300+¥300</li>
+    <li>地利：水族館/翡翠海灘車 5 分、備瀨 7 分、今歸仁城 10 分、古宇利 30 分；便利商店（車 2 分）賣水族館折扣票</li>
+  </ul>
+  </div>
+
+  <div class="guide">
+  <h3 class="sub">⑤ Okuma 奧間度假村（8/4–8/7）</h3>
+  <ul class="plain">
+    <li><b>2026 夏活動官方確認 7/18–8/31：花火二・四・六 21:00</b>（8/4 島唄夜、8/6 エイサー夜都看得到）；宝探し日三 16:20；浮筏一五 16:30（8/7 搭不上）</li>
+    <li><b>潮溜まりツアー 3 歲+（3–12 歲 ¥5,000）依乾潮開催 — 寄居蟹主題必排，入住當天即排程</b>；觀星 3–12 歲 ¥3,300／天文台 3–5 歲 ¥1,100；夜灘手電筒看陸寄居蟹（天然紀念物不可帶走）</li>
+    <li>海上：<b>玻璃底船未滿 6 歲免費</b>（11:00/15:00）；ベイビーマーブル ¥5,500/組（1–2 歲可）；SUP/獨木舟/腳踏船 3 歲+；浮潛 6 歲+ 不可</li>
+    <li><b>Okuma Passport</b> 大人 ¥7,500／3–12 歲 ¥5,000：拖曳圈/SUP/獨木舟無限＋折扣；退房後仍可用；部分方案附贈（訂房確認）</li>
+    <li>設施：4 泳池（兒童池 50cm）；展望浴場免費（嬰兒澡椅）；<b>洗衣 3 處＝全程洗衣站</b>；商店有尿布副食品；嬰兒床/車免費借（要預約）</li>
+    <li>餐：サーフサイド早 6:30（3–5 歲 ¥800）／晚 Buffet 17:30 早鳥兒童半價；あだん僅 8/5・8/6 可；BBQ 夏季週四照開；雨備＝手作工房、<b>ウフギー自然館（2026/7/16 重開，幼兒免費）</b></li>
+  </ul>
+  </div>
+
+  <div class="guide">
+  <h3 class="sub">⑥ 瀨長島住宿（已定案 Storyline）— 比較留檔</h3>
+  <div class="tablewrap"><table>
+    <thead><tr><th></th><th>Storyline 瀬長島（2024 開）</th><th>GranView Garden（豊崎）</th></tr></thead>
+    <tbody>
+      <tr><td class="day">位置</td><td>Umikaji 步行即達；DMM 車 8–10 分；機場 10 分</td><td><b>DMM/iias/AEON 步行 5–8 分</b>；機場 15 分</td></tr>
+      <tr><td class="day">設施</td><td>頂樓無邊際泳池（–21:00）＋<b>泳裝溫泉 SPA 全家同泡</b>；40㎡ 房、0–5 歲同床免費；免費 Lounge</td><td>花園泳池（–18:00）；大浴場 2026/3 翻新（男女分浴）；三人房 23㎡</td></tr>
+      <tr><td class="day">早餐</td><td>Picnic Breakfast ¥2,662 野餐籃</td><td>多含自助早；幼兒 ¥400–650</td></tr>
+      <tr><td class="day">噪音</td><td>雙層窗，口碑「關窗聽不到」；選高樓層</td><td>無疑慮</td></tr>
+      <tr><td class="day">價位/退房</td><td>8 月推估 ¥40,000–70,000+/晚（4.6 分）；退房 11:00</td><td>¥15,000–25,000/晚（4.0 分）；退房 10:00</td></tr>
+    </tbody>
+  </table></div>
+  <p class="lead" style="margin-top:8px">✅ <b>已選 Storyline</b>——飯店本身就是行程，最後兩晚零硬撐；8/9 11:00 退房→iias 採買→10 分到機場最從容。⚠️ 待辦：電話確認頂樓泳池／溫泉 SPA 對尿布兒的規定；訂房記得選高樓層（隔音口碑佳但戶外飛機聲大）。</p>
+  </div>
+</section>
+
+<section class="block" id="cash">
+  <h2>現金地圖與日幣預算 v2</h2>
+  <p class="lead">基準：2 大＋1 幼。💴 確定現金のみ｜🔶 不明備現金｜📱 卡不可收行動支付。度假村內活動餐飲多可刷卡/掛房帳。</p>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Day</th><th>現金點</th><th>估算</th></tr></thead>
+    <tbody>
+      <tr><td class="day">2–3</td><td>💴 万丸＋💴 福助（備案）＋🔶 あじとや咖喱＋首里杜館停車繳費機 ¥1,000</td><td>¥5,500</td></tr>
+
+      <tr><td class="day">7</td><td>💴 なかむらそば＋💴 琉冰＋🔶 真栄田岬繳費機（若順路）</td><td>¥4,200</td></tr>
+      <tr><td class="day">8</td><td>💴 山原そば</td><td>¥2,500</td></tr>
+      <tr><td class="day">9</td><td>💴 きしもと食堂＋🔶 水牛車 ¥2,000</td><td>¥4,500</td></tr>
+      <tr><td class="day">10</td><td>💴 伊豆味そば（若吃）＋📱 The Sinmay</td><td>¥3,500</td></tr>
+      <tr><td class="day">11</td><td>💴 むかしむかし</td><td>¥2,000</td></tr>
+      <tr><td class="day">12</td><td>📱 まるひら食堂＋💴 びすとろ海畑（晚餐）</td><td>¥8,500</td></tr>
+      <tr><td class="day">13</td><td>🔶 ゆいゆい国頭（只收 JCB/AMEX/Diners）＋ドーナツ</td><td>¥3,500</td></tr>
+      <tr><td class="day">14</td><td>💴 入り門家／笑味の店＋📱 しまドーナッツ</td><td>¥5,300</td></tr>
+      <tr><td class="day">15</td><td>🔶 美らSUN停車＋お魚センター攤販</td><td>¥3,500</td></tr>
+      <tr><td class="day">全程</td><td>投幣淋浴/置物櫃/販賣機/賽銭/萬麗縁日遊戲（每項 ¥500）等零錢</td><td>¥5,000</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <ul class="plain" style="margin-top:14px">
+    <li><b>合計約 ¥48,000–50,000 → 建議帶 ¥60,000</b>（含颱風容錯）；門票線上買齊＋有 Suica/PayPay 可壓到約 ¥42,000。多備 ¥1,000 紙鈔與 ¥100 硬幣。</li>
+    <li><b>刷卡陷阱</b>：ゆいゆい国頭くいな只收 JCB/AMEX/Diners；きじむなぁ・北谷殿内只收 VISA/Master；<b>EIBUN palette（RYUBO 1F）</b>與 EIBUN 壺屋 3 號店完全無現金；Busena 售票處刷卡限 16:00 前；元氣村前日 15 時後取消收 100%。</li>
+  </ul>
+</section>
+
+<section class="block" id="practical">
+  <h2>旺季實務備忘</h2>
+  <ul class="plain">
+    <li><b>颱風</b>：每段留可犧牲日；室內備案＝美ら海／DMM／iias／玩具博物館／萬麗與 Marine Piazza 室內泳池；海上項目停開判定看各官方頁；航班確定停飛才取消租車多免手續費。</li>
+    <li><b>箱水母</b>：只在有網海灘下水（本行程海灘全有網）；急救＝大量淋醋、勿淡水沖、冰敷；幼兒被螫直接就醫。</li>
+    <li><b>酷暑</b>：上午戶外、10–15 時室內或午睡、傍晚再出門——度假村午睡是行程的一部分。</li>
+    <li><b>人潮</b>：8/1–8/2 最擠（已排早出發＋度假村內消化）；美ら海 8:30 直衝或 17:00 後。</li>
+  </ul>
+</section>
+
+<section class="block" id="nexttime">
+  <h2>Next Time 候選</h2>
+  <ul class="plain">
+    <li>ごまきち道場壽司 DIY（小學生以上）｜比地大滝・ター滝（小學生以上）｜与那原大綱曳（8/15–16）｜全島エイサー（9/4–6）｜一万人エイサー（改 10 月）｜美ら海花火（2026 是 7/4）</li>
+    <li>萬麗 Club Savvy 完整版（住 4 晚）＋ドルフィンアドベンチャー（130cm 後）｜Okuma 浮潛團（6 歲後）</li>
+  </ul>
+</section>
+
+<footer>
+  v2 改版：2026/7/12 依航班（IT232/IT233）與六段住宿重排；專題攻略皆為官方 2025–2026 來源。地點連結為 Google Maps 搜尋，開啟後確認分店。營業時間以各店 IG／官網為準；颱風動態出發前三天開始盯。
+</footer>
+
+</div>
+</body>
+</html>
