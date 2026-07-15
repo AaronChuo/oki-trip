@@ -496,22 +496,7 @@
   </div>
 
   <div class="guide">
-  <h3 class="sub">⑥ 瀨長島住宿（已定案 Storyline）— 比較留檔</h3>
-  <div class="tablewrap"><table>
-    <thead><tr><th></th><th><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=ストーリーライン瀬長島" target="_blank" rel="noopener">Storyline 瀬長島</a>（2024 開）</th><th><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=グランビューガーデン沖縄+豊見城市" target="_blank" rel="noopener">GranView Garden</a>（豊崎）</th></tr></thead>
-    <tbody>
-      <tr><td class="day">位置</td><td>Umikaji 步行即達；DMM 車 8–10 分；機場 10 分</td><td><b>DMM／iias／AEON 步行 5–8 分</b>；機場 15 分</td></tr>
-      <tr><td class="day">設施</td><td>頂樓無邊際泳池（–21:00）＋<b>泳裝溫泉 SPA 全家同泡</b>；40㎡ 房、0–5 歲同床免費；免費 Lounge</td><td>花園泳池（–18:00）；大浴場 2026/3 翻新（男女分浴）；三人房 23㎡</td></tr>
-      <tr><td class="day">早餐</td><td>野餐早餐 ¥2,662 野餐籃</td><td>多含自助早；幼兒 ¥400–650</td></tr>
-      <tr><td class="day">噪音</td><td>雙層窗，口碑「關窗聽不到」；選高樓層</td><td>無疑慮</td></tr>
-      <tr><td class="day">價位／退房</td><td>8 月推估 ¥40,000–70,000+/晚（4.6 分）；退房 11:00</td><td>¥15,000–25,000/晚（4.0 分）；退房 10:00</td></tr>
-    </tbody>
-  </table></div>
-  <p class="lead" style="margin-top:8px">✅ <b>已選 Storyline</b>——飯店本身就是行程，最後兩晚零硬撐；8/9 11:00 退房→iias 採買→10 分到機場最從容。⚠️ 待辦：電話確認頂樓泳池／溫泉 SPA 對尿布兒的規定（見 📞 清單）；訂房記得選高樓層（隔音口碑佳但戶外飛機聲大）。</p>
-  </div>
-
-  <div class="guide">
-  <h3 class="sub">⑦ 六飯店自助洗烘衣一覽</h3>
+  <h3 class="sub">⑥ 六飯店自助洗烘衣一覽</h3>
   <div class="tablewrap"><table>
     <thead><tr><th>飯店（住宿）</th><th>形式</th><th>洗</th><th>烘</th><th>位置</th></tr></thead>
     <tbody>
@@ -527,7 +512,7 @@
   </div>
 
   <div class="guide">
-  <h3 class="sub">⑧ 本部外食一覽（8/1–8/4·優先外食）— 排定＋備案</h3>
+  <h3 class="sub">⑦ 本部外食一覽（8/1–8/4·優先外食）— 排定＋備案</h3>
   <div class="tablewrap"><table>
     <thead><tr><th>店（招牌）</th><th>六1／日2／一3／二4</th><th>時間・付款</th><th>幼兒・車程</th></tr></thead>
     <tbody>
@@ -597,5 +582,47 @@
 </footer>
 
 </div>
+
+<script>
+/* 區塊錨點：為每天/每篇攻略/每段/每大區產生可分享的 #id，並在標題加 🔗（點擊複製該區塊網址） */
+(function(){
+  var blocks = document.querySelectorAll('section.block, .seg, .day, .guide');
+  var gi = 0;
+  blocks.forEach(function(el){
+    if(!el.id){
+      if(el.classList.contains('day')){
+        var t = (el.querySelector('.dnum')||{}).textContent || '';
+        var m = t.match(/(\d+)\/(\d+)/);
+        if(m) el.id = 'd' + m[1] + '-' + m[2];      // 例：8/1 → d8-1
+      } else if(el.classList.contains('guide')){
+        el.id = 'g' + (++gi);                        // 攻略 → g1…g7
+      }
+    }
+    if(!el.id) return;
+    el.style.scrollMarginTop = 'calc(var(--nav-h) + 14px)';
+    var head = el.querySelector(':scope > header, :scope > .seg-head, :scope > h2, :scope > h3');
+    if(!head || head.querySelector('.jump')) return;
+    var a = document.createElement('a');
+    a.className = 'jump'; a.href = '#' + el.id; a.textContent = '🔗';
+    a.title = '點我複製此區塊的分享連結';
+    a.style.cssText = 'margin-left:.5em;font-size:.72em;text-decoration:none;opacity:.4;vertical-align:middle;cursor:pointer';
+    a.onmouseenter = function(){ a.style.opacity = '1'; };
+    a.onmouseleave = function(){ a.style.opacity = '.4'; };
+    a.addEventListener('click', function(){
+      var url = location.origin + location.pathname + '#' + el.id;
+      if(navigator.clipboard){
+        navigator.clipboard.writeText(url).then(function(){
+          a.textContent = '✓'; setTimeout(function(){ a.textContent = '🔗'; }, 1000);
+        }).catch(function(){});
+      }
+    });
+    head.appendChild(a);
+  });
+  if(location.hash){                                 // 用分享連結開啟時，id 產生後再捲動一次
+    var target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if(target) setTimeout(function(){ target.scrollIntoView(); }, 60);
+  }
+})();
+</script>
 </body>
 </html>
