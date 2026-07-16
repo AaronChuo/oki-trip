@@ -91,8 +91,9 @@
   h3.sub { font-size: 16.5px; margin: 26px 0 8px; letter-spacing: .03em; }
   .block > p.lead { margin: 0 0 18px; color: var(--ink-2); font-size: 14px; }
   ol.check { list-style: none; margin: 0; padding: 0; counter-reset: c; }
-  ol.check li { counter-increment: c; position: relative; padding: 12px 14px 12px 46px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; margin-bottom: 8px; font-size: 14.5px; }
-  ol.check li::before { content: counter(c, decimal-leading-zero); position: absolute; left: 14px; top: 14px; font-size: 12px; font-weight: 700; color: var(--sea); font-variant-numeric: tabular-nums; letter-spacing: .05em; }
+  ol.check > li { counter-increment: c; position: relative; padding: 12px 14px 12px 46px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; margin-bottom: 8px; font-size: 14.5px; }
+  ol.check > li::before { content: counter(c, decimal-leading-zero); position: absolute; left: 14px; top: 14px; font-size: 12px; font-weight: 700; color: var(--sea); font-variant-numeric: tabular-nums; letter-spacing: .05em; }
+  ol.check ul { list-style: disc; } ol.check ul li { font-size: 14px; margin: 2px 0; }
   ol.check .when { color: var(--ink-2); font-size: 12.5px; display: block; }
   .tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--card); -webkit-overflow-scrolling: touch; }
   table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 13.5px; }
@@ -130,7 +131,7 @@
     .routebar span { flex: 1 1 28%; padding: 9px 5px; }
     .routebar b { font-size: 13px; }
     .routebar i { font-size: 10.5px; }
-    ol.check li { padding: 10px 12px 10px 40px; }
+    ol.check > li { padding: 10px 12px 10px 40px; }
     ol.check li::before { left: 12px; top: 12px; }
     .day { padding: 13px 13px 11px; }
     .day li { padding: 22px 0 6px; }
@@ -215,10 +216,7 @@
   </div>
   <p class="lead">其餘依急迫排序（晚餐與海豚比門票急）：</p>
   <ol class="check">
-    <li>✅ <b>萬麗海豚已預約</b>（活動預約 email <b>onrcjapan@gmail.com</b>／☎️ +81-98-964-5629）— 觸摸體驗 S（¥18,000/人）。<span class="when">Happy Dolphin（¥25,000/組）／Splash 為現場制 → 7/29 入住直衝 Activity Counter；8/3 元氣村也有海豚（¥11,000/人）別重複。</span></li>
     <li><b>元氣村體驗預約</b>（優先 <a class="bd bd-res" href="https://www.asoview.com/channel/activities/ja/owf/offices/3934/courses" target="_blank" rel="noopener">asoview 線上 ↗</a>，無場次再打電話，見下方 📞 清單）：8/1 15:30 餵食野餐、8/2 15:00 半潛艇珊瑚觀光（挑戰券 10 枚·幼兒免費同乘）、8/3 14:00 海豚觸摸體驗 <span class="when">暑假常滿員；前日 15:00 後取消收 100%。早安海豚已取消（海豚已夠）。</span></li>
-    <li>✅ <b>兩個訂房方案皆已確認</b>：萬麗 Flash Sale 條款明載 Club Savvy（旺季 3 晚＝<b>Light</b>）＋每日含早＋一次 Choice Dinner（2 大人）、Deluxe 房型可用山田溫泉＋Lounge（現場確認）；<b>海洋廣場確定挑戰券對象 → 12 枚到手</b>（≈¥6,000–7,000·8/1 入住時櫃檯領取）</li>
-    <li>✅ <b>瀨長島住宿已定案：Storyline</b>（訂房後電話確認頂樓泳池／溫泉 SPA 對尿布兒的規定，見下方 📞 清單）</li>
     <li><b>萬麗晚餐 TableCheck 三晚</b>（3–12 歲指定餐廳晚餐免費·4–10 月）：
       <ul style="margin:6px 0 0;padding-left:1.1em;font-size:14px;">
         <li><b>7/30</b> <a href="https://www.tablecheck.com/en/shops/sailfishcafe-renaissance-okinawa-resort/reserve" target="_blank" rel="noopener">Sailfish 自助</a>（用 Choice Dinner＝2 大免費；當天 Coral 休）</li>
@@ -237,8 +235,6 @@
         <li>元氣村：挑戰券兌換制＋與那國馬只餵養無騎乘</li>
         <li>OTS 還車留 8/9（豊崎營業所·免費巴士每 15 分到機場；8/8 提前還退費扣 50% 不划算·先電 098-856-8877）</li>
       </ul></li>
-    <li>（選配）<a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=笑味の店+大宜味村" target="_blank" rel="noopener">笑味の店</a> 8/7 午（💴 完全預約制、8/6 前 ☎️ 0980-44-3220）；<a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=首里琉染+那覇市首里" target="_blank" rel="noopener">首里琉染</a> 7/26（無車，單軌＋計程車）<a class="bd bd-res" href="https://www.shuri-ryusen.com/course/sango.html" target="_blank" rel="noopener">官網預約 ↗</a></li>
-    <li><b>已確認條款</b>：萬麗 3–5 歲兒童設施費 7/1–9/30 為 ¥6,050/晚（平時 ¥4,400；2 歲以下免）；壽司 DIY 確定放棄（限小學生以上）</li>
   </ol>
 
   <p class="lead" style="margin-top:16px"><b>To Do 補充</b>：長袖水母衣＋寬簷帽、揹巾、食用醋（水母急救）、現金約 ¥55,000–60,000、<b>手電筒（奧間夜灘找寄居蟹＋觀星）</b>、泳池尿布（萬麗／Okuma 泳池要求）、安全座椅金屬扣先散熱。</p>
