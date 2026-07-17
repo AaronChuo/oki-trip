@@ -112,6 +112,8 @@
   .day header { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
   .day .dnum { font-size: 12px; font-weight: 700; letter-spacing: .1em; color: var(--sea); font-variant-numeric: tabular-nums; }
   .day h4 { margin: 0; font-size: 16.5px; letter-spacing: .02em; }
+  .glink { margin-left: auto; align-self: center; font-size: 11.5px; font-weight: 600; color: var(--sea); text-decoration: none; border: 1px solid var(--line); border-radius: 999px; padding: 2px 10px; white-space: nowrap; }
+  .glink:hover { background: var(--sea); color: #fff; border-color: var(--sea); }
   .day ul { margin: 0; padding: 0; list-style: none; }
   .day li { padding: 5px 0 5px 58px; position: relative; font-size: 14.5px; }
   .day li .t { position: absolute; left: 0; top: 7px; width: 48px; font-size: 11.5px; font-weight: 600; color: var(--ink-2); letter-spacing: .06em; }
@@ -121,7 +123,9 @@
   ul.plain { margin: 0; padding-left: 1.2em; }
   ul.plain li { margin-bottom: 6px; font-size: 14.5px; }
   .guide { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 4px 18px 14px; margin-top: 16px; }
-  footer { margin-top: 64px; font-size: 12.5px; color: var(--ink-2); border-top: 1px solid var(--line); padding-top: 16px; }
+  footer { margin-top: 64px; font-size: 12px; color: var(--ink-2); border-top: 1px solid var(--line); padding-top: 16px; }
+  .foot-meta { display: flex; gap: 14px; align-items: center; margin-top: 9px; font-size: 11px; color: var(--ink-2); opacity: .5; }
+  .foot-meta .views { display: inline-flex; align-items: center; gap: 4px; font-variant-numeric: tabular-nums; }
 
   @media (max-width: 600px) {
     body { padding: 0 14px 72px; font-size: 15px; }
@@ -164,7 +168,7 @@
   <a href="#seg-kunigami"><span class="dot" style="--dot:#3E7A4C"></span>國頭</a>
   <a href="#seg-senaga"><span class="dot" style="--dot:#7059A8"></span>瀨長島</a>
   <a href="#guides">攻略</a>
-  <a href="#notes">💴 現金・備忘</a>
+  <a href="#notes">📌 其它事項</a>
 </nav>
 
 <details style="margin:8px 0 0;border:1px solid var(--line);border-radius:10px;background:var(--card);">
@@ -175,7 +179,7 @@
     <div style="font-size:11px;letter-spacing:.1em;color:var(--ink-2);margin-top:8px;">攻略</div>
     <a href="#g1">①RYUBO</a> · <a href="#g2">②萬麗</a> · <a href="#g3">③海洋廣場</a> · <a href="#g4">④Okuma</a> · <a href="#g5">⑤洗衣</a>
     <div style="font-size:11px;letter-spacing:.1em;color:var(--ink-2);margin-top:8px;">其他</div>
-    <a href="#checklist">必辦</a> · <a href="#notes">旺季實務・現金・Next Time</a>
+    <a href="#checklist">必辦</a> · <a href="#notes">其它注意事項</a>
   </div>
 </details>
 
@@ -257,7 +261,7 @@
       </ul></div></details>
     </article>
     <article class="day">
-      <header><span class="dnum">DAY 2 · 7/26 日</span><h4>RYUBO＋國際通封街日</h4></header>
+      <header><span class="dnum">DAY 2 · 7/26 日</span><h4>RYUBO＋國際通封街日</h4><a class="glink" href="#g1">查看攻略 ↗</a></header>
       <ul>
         <li><span class="t">8:00</span><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=BETTER+GIRL+那覇市久茂地" target="_blank" rel="noopener">Better Girl</a><span class="bd bd-star">⭐</span> 早餐</li>
         <li><span class="t">10:00</span><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=デパートリウボウ+パレットくもじ+那覇" target="_blank" rel="noopener">RYUBO</a> 7F The Kids＋迪士尼</li>
@@ -324,7 +328,7 @@
       </ul></div></details>
     </article>
     <article class="day">
-      <header><span class="dnum">DAY 5 · 7/29 三</span><h4>可麗餅之日＋豬腳 → 萬麗（搶活動櫃檯）</h4></header>
+      <header><span class="dnum">DAY 5 · 7/29 三</span><h4>可麗餅之日＋豬腳 → 萬麗（搶活動櫃檯）</h4><a class="glink" href="#g2">查看攻略 ↗</a></header>
       <ul>
         <li><span class="t">8–10</span>早餐 <b><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=ミナミノカフェ+北谷町美浜" target="_blank" rel="noopener">Minamino Cafe</a></b><span class="bd bd-star">⭐ 口袋名單</span></li>
         <li><span class="t">11:00</span>退房 → <b><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=ブルーシール+デポアイランド店+北谷町" target="_blank" rel="noopener">Blue Seal 可麗餅</a></b><span class="bd bd-star">⭐</span> 29 優惠日 → 北上</li>
@@ -349,7 +353,7 @@
   <div class="seg" id="seg-onna" style="--seg:#0E6B72">
     <div class="seg-head"><h3>恩納 · Renaissance 萬麗</h3><span class="dates">Day 5–8 · 7/29–8/1 · Club Savvy Light ✅ · in14／out11</span></div>
     <article class="day">
-      <header><span class="dnum">DAY 6 · 7/30 四</span><h4>海豚＋私人海灘①＋冨士晚餐</h4></header>
+      <header><span class="dnum">DAY 6 · 7/30 四</span><h4>海豚＋私人海灘①＋冨士晚餐</h4><a class="glink" href="#g2">查看攻略 ↗</a></header>
       <ul>
         <li><span class="t">8–10</span>早餐</li>
         <li><span class="t">9:30</span><b>Happy Dolphin</b><span class="bd bd-star">⭐ 幼兒最適</span></li>
@@ -371,7 +375,7 @@
       </ul></div></details>
     </article>
     <article class="day">
-      <header><span class="dnum">DAY 7 · 7/31 五</span><h4>私人海灘②＋海豚＋Coral BBQ</h4></header>
+      <header><span class="dnum">DAY 7 · 7/31 五</span><h4>私人海灘②＋海豚＋Coral BBQ</h4><a class="glink" href="#g2">查看攻略 ↗</a></header>
       <ul>
         <li><span class="t">8:30</span><b>私人海灘第 2 次</b>／Kids Splash 噴水區</li>
         <li><span class="t">10:30</span>小丑魚號觀魚船／室內泳池</li>
@@ -392,7 +396,7 @@
       </ul></div></details>
     </article>
     <article class="day">
-      <header><span class="dnum">DAY 8 · 8/1 六</span><h4>萬麗 → 本部（名護動物日）</h4></header>
+      <header><span class="dnum">DAY 8 · 8/1 六</span><h4>萬麗 → 本部（名護動物日）</h4><a class="glink" href="#g3">查看攻略 ↗</a></header>
       <ul>
         <li><span class="t">11:00</span>早餐（8–10）後<b>用滿退房</b> → 北上名護（不趕）</li>
         <li><span class="t">12:30</span><b><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=沖縄そば+むかしむかし+名護市中山" target="_blank" rel="noopener">從前從前（むかしむかし）</a></b> 沖繩麵 午餐<span class="bd bd-star">⭐</span><span class="bd bd-cash">💴</span></li>
@@ -415,7 +419,7 @@
   <div class="seg" id="seg-motobu" style="--seg:#2B5FA3">
     <div class="seg-head"><h3>本部 · Marine Piazza（元氣村旁）</h3><span class="dates">Day 8–11 · 8/1–8/4 · 早餐免費 · 挑戰券 12 枚 ✅ · in14／out11</span></div>
     <article class="day">
-      <header><span class="dnum">DAY 9 · 8/2 日</span><h4>備瀨水牛車＋半潛艇＋海灘</h4></header>
+      <header><span class="dnum">DAY 9 · 8/2 日</span><h4>備瀨水牛車＋半潛艇＋海灘</h4><a class="glink" href="#g3">查看攻略 ↗</a></header>
       <ul>
         <li><span class="t">8–10</span>早餐（BREEZE 免費）→ 室內泳池／大浴場</li>
         <li><span class="t">11:00</span><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=備瀬のフクギ並木+本部町" target="_blank" rel="noopener">備瀨水牛車</a><span class="bd bd-cash">🔶 ¥2,000/車</span>＋福木林道</li>
@@ -435,7 +439,7 @@
       </ul></div></details>
     </article>
     <article class="day">
-      <header><span class="dnum">DAY 10 · 8/3 一</span><h4>元氣村海豚＋美麗海夜間黃金動線</h4></header>
+      <header><span class="dnum">DAY 10 · 8/3 一</span><h4>元氣村海豚＋美麗海夜間黃金動線</h4><a class="glink" href="#g3">查看攻略 ↗</a></header>
       <ul>
         <li><span class="t">8–10</span>早餐 → 輕鬆上午（泳池／大浴場）</li>
         <li><span class="t">11:30</span>午餐 <b><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=島豚家+本部町豊原" target="_blank" rel="noopener">島豚家（阿古豬）</a></b> 阿古豬炭烤麵<span class="bd bd-star">⭐</span><span class="bd bd-cash">💴</span></li>
@@ -458,12 +462,12 @@
       </ul></div></details>
     </article>
     <article class="day">
-      <header><span class="dnum">DAY 11 · 8/4 二</span><h4>→ Okuma · 島歌煙火夜</h4></header>
+      <header><span class="dnum">DAY 11 · 8/4 二</span><h4>→ Okuma · 島歌煙火夜</h4><a class="glink" href="#g4">查看攻略 ↗</a></header>
       <ul>
         <li><span class="t">8–10</span>早餐 → <b>退房前備用時間</b></li>
         <li><span class="t">11:00</span>退房 → <b><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=The+Sinmay+今帰仁村玉城" target="_blank" rel="noopener">The Sinmay</a></b><span class="bd bd-cash">📱 只收行動支付／QR·不收現金也不收卡</span></li>
         <li><span class="t">午</span>森林咖啡午餐 <b><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=CALiN+カラン+名護市運天原" target="_blank" rel="noopener">森林咖啡 CALiN</a></b><span class="bd bd-warn">週一休·今開</span></li>
-        <li><span class="t">午後</span>大宜味 <b><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=結の浜公園+大宜味村塩屋" target="_blank" rel="noopener">結之濱公園</a></b><span class="bd bd-star">⭐</span> → <b><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=オクマプライベートビーチ+国頭村奥間" target="_blank" rel="noopener">Okuma</a> check-in → Beach Info Desk</b><span class="bd bd-star">🦀 優先</span></li>
+        <li><span class="t">午後</span>大宜味 <b><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=結の浜公園+大宜味村塩屋" target="_blank" rel="noopener">結之濱公園</a></b><span class="bd bd-star">⭐</span> → <a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=道の駅ゆいゆい国頭+国頭村" target="_blank" rel="noopener">道之驛 ゆいゆい国頭</a>（国頭甜甜圈＋<a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=ファミリーマート奥間ビーチ前店+国頭村" target="_blank" rel="noopener">旁邊 FamilyMart</a> 補貨·順路）→ <b><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=オクマプライベートビーチ+国頭村奥間" target="_blank" rel="noopener">Okuma</a> check-in → Beach Info Desk</b><span class="bd bd-star">🦀 優先</span></li>
         <li><span class="t">17:30</span>サーフサイド 早鳥自助 → 20:30 島唄 Live → <b>21:00 煙火</b><span class="bd bd-fire">🎆 官方確認</span></li>
       </ul>
       <details class="det"><summary>細節・價格・備案</summary><div class="body"><ul>
@@ -480,7 +484,7 @@
   <div class="seg" id="seg-kunigami" style="--seg:#3E7A4C">
     <div class="seg-head"><h3>國頭 · Okuma 度假村</h3><span class="dates">Day 11–14 · 8/4–8/7 · 煙火二四六 21:00 · 洗衣站 · in15／out11</span></div>
     <article class="day">
-      <header><span class="dnum">DAY 12 · 8/5 三</span><h4>山原玩具日＋私人海灘＋夜灘寄居蟹</h4></header>
+      <header><span class="dnum">DAY 12 · 8/5 三</span><h4>山原玩具日＋私人海灘＋夜灘寄居蟹</h4><a class="glink" href="#g4">查看攻略 ↗</a></header>
       <ul>
         <li><span class="t">上午</span><b><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=やんばる森のおもちゃ美術館+国頭村辺土名" target="_blank" rel="noopener">山原森林玩具美術館</a></b><span class="bd bd-star">⭐</span></li>
         <li><span class="t">午</span><b><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=国頭港食堂+国頭村辺土名" target="_blank" rel="noopener">國頭港食堂</a></b> 漁港刺身定食<span class="bd bd-star">🦀 兒童遊戲區·扣海邊生物</span> → 車程午睡</li>
@@ -499,16 +503,16 @@
       </ul></div></details>
     </article>
     <article class="day">
-      <header><span class="dnum">DAY 13 · 8/6 四</span><h4>本島最北端＋太鼓舞煙火夜</h4></header>
+      <header><span class="dnum">DAY 13 · 8/6 四</span><h4>本島最北端＋太鼓舞煙火夜</h4><a class="glink" href="#g4">查看攻略 ↗</a></header>
       <ul>
         <li><span class="t">9:30</span>早餐後出發 <a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=大石林山+ASMUI+国頭村" target="_blank" rel="noopener">ASMUI（大石林山）</a> <a class="bd bd-res" href="https://asmui.com/" target="_blank" rel="noopener">購票 ↗</a> → <a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=辺戸岬+国頭村" target="_blank" rel="noopener">辺戸岬</a>＋<a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=ヤンバルクイナ展望台+国頭村" target="_blank" rel="noopener">山原水雞展望台</a></li>
-        <li><span class="t">午</span><b><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=まるひら食堂+国頭村宇嘉" target="_blank" rel="noopener">丸平食堂</a></b> 拳頭炸雞定食<span class="bd bd-star">⭐</span> → <a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=道の駅ゆいゆい国頭+国頭村" target="_blank" rel="noopener">道之驛 ゆいゆい國頭</a> 買甜甜圈 → 車程午睡</li>
+        <li><span class="t">午</span><b><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=まるひら食堂+国頭村宇嘉" target="_blank" rel="noopener">丸平食堂</a></b> 拳頭炸雞定食<span class="bd bd-star">⭐</span> → 車程午睡</li>
         <li><span class="t">15:30</span><b>玻璃底船</b>＋家庭拖曳圈</li>
         <li><span class="t">17:30</span><a class="pl" href="https://www.google.com/maps/search/?api=1&amp;query=Beachside+BBQ+オクマ+国頭村奥間" target="_blank" rel="noopener">Beachside BBQ</a><span class="bd bd-res">需前日 17:00 前預約</span> → 20:30 エイサー太鼓 → <b>21:00 煙火</b><span class="bd bd-fire">🎆 官方確認</span></li>
       </ul>
       <details class="det"><summary>細節・價格・備案</summary><div class="body"><ul>
         <li>ASMUI（大石林山）：9:30–17:30·最終受付 16:00·年中無休·大人 ¥2,500／兒童 6–14 ¥1,000（未滿 6 歲未列·現場確認）；<b>嬰兒車只走「無障礙路線」（約 20 分平坦）＋石之文化博物館，主巨石步道有階梯需抱走</b>（館方出借輪椅、無嬰兒車）→ 辺戸岬＋山原水雞展望台</li>
-        <li>丸平食堂 拳頭炸雞定食：<span class="bd bd-warn">週日一休·今開</span>；宇嘉·往辺戸順路·份量可選；回程 道之驛 ゆいゆい國頭 買國頭甜甜圈 → <b>往返北端車程當孩子午睡·養足煙火夜</b></li>
+        <li>丸平食堂 拳頭炸雞定食：<span class="bd bd-warn">週日一休·今開</span>；宇嘉·往辺戸順路·份量可選 → <b>往返北端車程當孩子午睡·養足煙火夜</b>（国頭甜甜圈已在 8/4 順路買）</li>
         <li>玻璃底船（約 15:30·30 分·坐著看珊瑚魚·大人 ¥3,000／小人 3–12 ¥2,000·持 Okuma Passport 各折 ¥1,000）＋家庭拖曳圈（Baby Marble／バナナボート ¥1,800/回·持 Passport 免費 3 次·年齡與價格現場確認）</li>
         <li>Beachside BBQ（7/18–8/31 週四照開·17:30–21:30 LO21:00·兒童 ¥4,500·每日限 5 組·前日 17:00 前線上預約）→ 20:15 MC 開場·20:30 エイサー太鼓 → 21:00 煙火</li>
         <li>潮池導覽（磯観察）8/5–8/6 皆小潮·恐不開·以現場 Info Desk 為準；若遇開催且乾潮落在 8/6，玻璃船可讓位。北端往返長車程＝孩子車上午睡。比地大滝、ター滝幼兒不可 → Next Time。</li>
@@ -582,7 +586,7 @@
   <div class="guide">
   <h3 class="sub">① RYUBO 琉貿百貨／パレットくもじ（縣廳前直結，飯店步行 3 分）</h3>
   <p class="lead" style="margin:2px 0 6px">縣廳前直結·步行 3 分：遊戲、用餐、育嬰、購物一站到位。</p>
-  <details class="det"><summary>展開明細</summary><div class="body">
+  <details class="det"><summary>展開攻略明細</summary><div class="body">
   <div class="tablewrap"><table>
     <thead><tr><th>類別</th><th>明細</th></tr></thead>
     <tbody>
@@ -599,7 +603,7 @@
   <div class="guide">
   <h3 class="sub">② 萬麗 Renaissance（恩納 7/29–8/1）</h3>
   <p class="lead" style="margin:2px 0 6px">Flash Sale＋Club Savvy Light：每日含早＋一次 Choice Dinner＋3–12 歲指定晚餐免費；海豚 7/30 Happy・7/31 Splash（Encounter S ✅已辦·事前 email <b>onrcjapan@gmail.com</b>／☎098-964-5629）；現場制項目<b>入住直衝 Activity Counter</b>。</p>
-  <details class="det"><summary>展開明細（活動表）</summary><div class="body">
+  <details class="det"><summary>展開攻略明細</summary><div class="body">
   <div class="tablewrap"><table>
     <thead><tr><th>類別</th><th>明細</th></tr></thead>
     <tbody>
@@ -655,7 +659,7 @@
   <div class="guide">
   <h3 class="sub">③ 海洋廣場×元氣村（本部 8/1–8/4）</h3>
   <p class="lead" style="margin:2px 0 6px">飯店步行 3 分到元氣村；活動多現場或 asoview 訂。<b>⚠️ 幼兒設施利用費：旺季 7/18–8/29 約 ¥6,000/晚（平時 ¥3,000），3–5 歲不選餐/寢具者，訂房前電話 0980-48-3000 確認。</b></p>
-  <details class="det"><summary>展開明細</summary><div class="body">
+  <details class="det"><summary>展開攻略明細</summary><div class="body">
   <div class="tablewrap"><table>
     <thead><tr><th>類別</th><th>明細</th></tr></thead>
     <tbody>
@@ -675,7 +679,7 @@
   <div class="guide">
   <h3 class="sub">④ Okuma 奧間度假村（2026 改名 OKUMA 私人海灘＆度假村·8/4–8/7）</h3>
   <p class="lead" style="margin:2px 0 6px">煙火二・四・六 21:00（8/4・8/6 都看得到）；寄居蟹主題以<b>夜灘手電筒</b>為主（潮池導覽依乾潮·8/5–8/6 恐不開）；園區 3 處洗衣站。</p>
-  <details class="det"><summary>展開明細</summary><div class="body">
+  <details class="det"><summary>展開攻略明細</summary><div class="body">
   <div class="tablewrap"><table>
     <thead><tr><th>類別</th><th>明細</th></tr></thead>
     <tbody>
@@ -693,7 +697,7 @@
   <div class="guide">
   <h3 class="sub">⑤ 六飯店自助洗烘衣一覽</h3>
   <p class="lead" style="margin:2px 0 6px">主力洗衣＝萬麗（免費）＋RIHGA（房內）；中途補 Okuma（3 處）；備 ¥100 硬幣（Storyline 無兌幣機）。</p>
-  <details class="det"><summary>展開明細</summary><div class="body">
+  <details class="det"><summary>展開攻略明細</summary><div class="body">
   <div class="tablewrap"><table>
     <thead><tr><th>飯店（住宿）</th><th>形式</th><th>洗</th><th>烘</th><th>位置</th></tr></thead>
     <tbody>
@@ -712,7 +716,7 @@
 </section>
 
 <section class="block" id="notes">
-  <h2>旺季實務・現金・Next Time</h2>
+  <h2>其它注意事項</h2>
   <p class="lead">基準：2 大＋1 幼。💴 只收現金｜🔶 不明備現金｜📱 卡不可收行動支付。度假村內活動餐飲多可刷卡／掛房帳。</p>
   <div class="tablewrap">
   <table>
@@ -755,7 +759,11 @@
 </section>
 
 <footer>
-  改版：2026/7 依航班（IT232／IT233）與六段住宿重排；專題攻略皆為官方 2025–2026 來源。地點連結為 Google Maps 搜尋，開啟後確認分店。營業時間以各店 IG／官網為準；颱風動態出發前三天開始盯。
+  <div class="foot-note">地點連結為 Google Maps 搜尋（開啟後確認分店）；營業時間以各店官方為準；颱風動態出發前三天起盯。</div>
+  <div class="foot-meta">
+    <span>最後更新 <span id="lastupdate">2026-07-17 16:04:55</span></span>
+    <span class="views" id="viewbox" style="display:none">👁 <span id="views"></span></span>
+  </div>
 </footer>
 
 </div>
@@ -800,6 +808,14 @@
     if(target) setTimeout(function(){ target.scrollIntoView(); }, 60);
   }
 })();
+/* 極低調瀏覽次數（僅 icon＋數字，失敗則不顯示） */
+fetch('https://abacus.jasoncameron.dev/hit/oki-trip-xiii/main').then(function(r){ return r.json(); }).then(function(d){
+  if(d && typeof d.value !== 'undefined'){
+    var v = document.getElementById('views'), box = document.getElementById('viewbox');
+    if(v) v.textContent = String(d.value);
+    if(box) box.style.display = 'inline-flex';
+  }
+}).catch(function(){});
 </script>
 </body>
 </html>
