@@ -82,6 +82,17 @@
   ul.plain { list-style:none; margin:8px 0 0; padding:0; }
   ul.plain li { padding:4px 0; }
 
+  /* 出發前 checklist */
+  .cl-group { margin-top:18px; }
+  .cl-group h4 { margin:0 0 4px; font-size:14px; letter-spacing:.04em; color:var(--clay); }
+  .checklist { list-style:none; margin:0; padding:0; border:1px solid var(--line); border-radius:12px; background:var(--card); overflow:hidden; }
+  .checklist li { padding:0; border-top:1px dashed var(--line); font-size:14px; }
+  .checklist li:first-child { border-top:none; }
+  .checklist label { display:flex; gap:10px; align-items:flex-start; cursor:pointer; padding:10px 14px; }
+  .checklist input { margin:3px 0 0; width:17px; height:17px; accent-color:var(--clay); flex:0 0 auto; }
+  .checklist input:checked ~ span { color:var(--ink-2); text-decoration:line-through; }
+  .checklist .sub { display:block; font-size:12px; color:var(--ink-2); margin-top:2px; text-decoration:none; }
+
   footer { margin-top:60px; font-size:12px; color:var(--ink-2); border-top:1px solid var(--line); padding-top:14px; }
   .foot-meta { display:flex; gap:14px; align-items:center; margin-top:8px; font-size:11px; opacity:.5; }
   .foot-meta .views { display:inline-flex; align-items:center; gap:4px; font-variant-numeric:tabular-nums; }
@@ -98,7 +109,7 @@
   <a href="#term3">本部畢旅</a>
   <a href="#afterschool">放學後池</a>
   <a href="#adults">大人自由日</a>
-  <a href="#admin">註冊須知</a>
+  <a href="#admin">行前 Checklist</a>
 </nav>
 
 <header class="hero">
@@ -283,28 +294,55 @@
 </section>
 
 <section class="block" id="admin">
-  <h2>註冊須知（待辦・待決）</h2>
-  <div class="note">
-    <b>✏️ 待辦排序</b>
-    <ul class="plain">
-      <li>✅ <b>航班定案</b>＝13 沖同班：去 IT232 8/15 20:50 抵・回 IT233 8/23 18:30 飛</li>
-      <li>① <b>8/15 第一晚（待訂）</b>：首選 <b>Hotel GranView Garden</b>（豊崎·同 OTS 街廓）；次選 瀬長島（琉球溫泉／Storyline）——20:50 落地計程車 ¥1,300–1,700 進飯店</li>
-      <li>② <b>紫村（8/16–21 五晚·in15／out11·住客白天免費入園＋妖怪祭免費）與 Orion（8/21–23 兩晚）</b>：訂房狀態確認</li>
-      <li>③ <b>租車＝隔天 8/16 取</b>·OTS 臨空豊崎 <b>08:00 開門</b>（自行到店取·別等 8:30 接駁）；8/23 還車同点·<a href="tel:098-856-8877">☎ 098-856-8877</a> 確認接駁班次</li>
+  <h2>出發前 Checklist</h2>
+  <p class="lead" style="margin-bottom:6px">可勾選·自動記住（同裝置瀏覽器）。✅ <b>航班已定</b>＝13 沖同班（去 IT232 8/15 20:50 抵・回 IT233 8/23 18:30 飛）。</p>
+
+  <div class="cl-group">
+    <h4>🔴 現在就辦（訂房＋租車）</h4>
+    <ul class="checklist">
+      <li><label><input type="checkbox" id="k1"><span>8/15 第一晚訂房<span class="sub">首選 Hotel GranView Garden（豊崎·同 OTS 街廓）／次選 瀬長島；20:50 落地計程車 ¥1,300–1,700 進飯店</span></span></label></li>
+      <li><label><input type="checkbox" id="k2"><span>紫村（ホテルむら咲むら）8/16–21 五晚<span class="sub">in15／out11·住客白天免費入園＋妖怪祭免費——確認/訂</span></span></label></li>
+      <li><label><input type="checkbox" id="k3"><span>本部 Orion 8/21–23 兩晚<span class="sub">房型／早餐確認</span></span></label></li>
+      <li><label><input type="checkbox" id="k4"><span>租車 OTS 臨空豊崎（8/16 取・8/23 還）<span class="sub">8/16 自行到店 08:00 開門即取（別等 8:30 接駁）·8/23 還車後接駁機場·☎ 098-856-8877</span></span></label></li>
     </ul>
   </div>
-  <ul class="plain" style="margin-top:14px">
-    <li>🏫 <b>學校相關</b>：よみたん自然学校 入學文件/帶物清單；8/21 交流會時間確認</li>
-    <li>📋 <b>功課待做</b>：Gala 吹玻璃 8/20 預約（¥4,400 起·大人輪流做）；夜間水族館購票；<b>行前三確認</b>＝水円／番所亭 IG（售完即關＋臨時休）・殘波岬燈塔臨時休止公告・妖怪祭 8 月中無臨時休催（☎ 098-958-1111）</li>
-    <li>🌀 <b>沿用 13 沖實務</b>：8 月箱水母高峰＝只在有網海灘下水（醋急救）；颱風季留可犧牲日；酷暑＝午睡避暑、傍晚出門</li>
-    <li>🎒 <b>裝備沿用</b>：長袖水母衣＋寬簷帽・揹巾・食用醋・手電筒＋<b>上學用品</b></li>
-  </ul>
+
+  <div class="cl-group">
+    <h4>🟡 出發前 2–4 週</h4>
+    <ul class="checklist">
+      <li><label><input type="checkbox" id="k5"><span>よみたん自然学校 入學文件＋帶物清單</span></label></li>
+      <li><label><input type="checkbox" id="k6"><span>跟學校確認 8/21（五）父母交流會時間</span></label></li>
+      <li><label><input type="checkbox" id="k7"><span>Gala 青い海 吹玻璃 8/20 預約<span class="sub">¥4,400 起·6 歲+·大人輪流做</span></span></label></li>
+      <li><label><input type="checkbox" id="k8"><span>美麗海 夜間水族館 購票方式（8/22 選配）</span></label></li>
+    </ul>
+  </div>
+
+  <div class="cl-group">
+    <h4>🟢 出發前 1–3 天（複查）</h4>
+    <ul class="checklist">
+      <li><label><input type="checkbox" id="k9"><span>水円／番所亭 IG<span class="sub">售完即關＋臨時休（水円限 8/20 週四）</span></span></label></li>
+      <li><label><input type="checkbox" id="k10"><span>殘波岬燈塔 臨時休止公告<span class="sub">tokokai.org/info（今年已停兩次）</span></span></label></li>
+      <li><label><input type="checkbox" id="k11"><span>妖怪祭 8 月中無臨時休催<span class="sub">☎ 098-958-1111</span></span></label></li>
+      <li><label><input type="checkbox" id="k12"><span>OTS 8/16 接駁/開門班次<span class="sub">☎ 098-856-8877</span></span></label></li>
+      <li><label><input type="checkbox" id="k13"><span>颱風動態（出發前 3 天起盯）·各段留可犧牲日</span></label></li>
+    </ul>
+  </div>
+
+  <div class="cl-group">
+    <h4>🎒 打包（沿用 13 沖）</h4>
+    <ul class="checklist">
+      <li><label><input type="checkbox" id="k14"><span>長袖水母衣＋寬簷帽・揹巾（座喜味城跡必備）・食用醋（水母急救）・手電筒</span></label></li>
+      <li><label><input type="checkbox" id="k15"><span>孩子上學用品</span></label></li>
+      <li><label><input type="checkbox" id="k16"><span>泳具（Orion 玩水＋紫村銭湯）</span></label></li>
+    </ul>
+  </div>
+  <p class="lead" style="margin-top:12px;font-size:13px">🌀 沿用 13 沖實務：8 月箱水母高峰＝只在有網海灘下水；酷暑＝上午一科・午睡避暑・傍晚出門。</p>
 </section>
 
 <footer>
   <div>初步課表（皆可挪）；地點連結為 Google Maps 搜尋，開啟後確認分店；詳細功課排定後逐段補上。</div>
   <div class="foot-meta">
-    <span>最後更新 <span id="lastupdate">2026-07-21 00:59:13</span></span>
+    <span>最後更新 <span id="lastupdate">2026-07-21 01:03:55</span></span>
     <span class="views" id="viewbox" style="display:none">👁 <span id="views"></span></span>
   </div>
 </footer>
@@ -345,6 +383,19 @@
     var target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
     if(target) setTimeout(function(){ target.scrollIntoView(); }, 60);
   }
+})();
+/* 出發前 checklist：勾選狀態記到 localStorage */
+(function(){
+  try {
+    var boxes = document.querySelectorAll('.checklist input[type="checkbox"]');
+    boxes.forEach(function(b){
+      var key = 'xiv-chk-' + b.id;
+      if(localStorage.getItem(key) === '1') b.checked = true;
+      b.addEventListener('change', function(){
+        try { localStorage.setItem(key, b.checked ? '1' : '0'); } catch(e){}
+      });
+    });
+  } catch(e){}
 })();
 /* 極低調瀏覽次數 */
 fetch('https://abacus.jasoncameron.dev/hit/oki-trip-xiv/main').then(function(r){ return r.json(); }).then(function(d){
